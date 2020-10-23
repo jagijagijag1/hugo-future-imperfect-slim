@@ -40,6 +40,26 @@
     {{ end }}
   {{ end }}
 
+  {{ if .Site.Params.sidebar.pixelaAccessCounter }}
+      <section id="pixela_access_counter">
+        <header>
+          <h1>Blog PVs</h1>
+        </header>
+        <div id="svg-load-area" style="border: 1px solid rgba(161, 161, 161, 0.3);"></div>
+        <div style="text-align:right;">Powered by <a href="https://pixe.la/" target="_blank">Pixela</a></div>
+      </section>
+      <script src="https://unpkg.com/tippy.js@3/dist/tippy.all.min.js"></script>
+      <script>
+      document.addEventListener('DOMContentLoaded', function(){
+        $('#svg-load-area').load('{{.Site.Params.sidebar.pixelaACGraphURL}}', function(){
+          tippy('.each-day', {
+            arrow: true
+          });
+        });
+      });
+      </script>
+  {{ end }}
+
   {{ if .Site.Params.sidebar.about }}
     <section id="mini-bio">
       <header>
