@@ -1,0 +1,8 @@
+.count-container {
+  color: inherit !important;
+}
+
+.count-container > .count {
+  float: none !important;
+  color: inherit !important;
+}

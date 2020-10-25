@@ -1,3 +1,9 @@
+{{ if .Site.Params.enableApplause }}
+  <div>
+    <applause-button color="{{ .Site.Params.applauseButtonColor }}" multiclap="true" style="width: 55px; height: 55px; margin-right: 15px;"/>
+  </div>
+{{ end }}
+
 {{ $permalink := $.Scratch.Get "Permalink" }}
 {{ $title := $.Scratch.Get "Title" }}
 {{ $author := $.Scratch.Get "Author" }}

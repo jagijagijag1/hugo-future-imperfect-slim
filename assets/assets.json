@@ -1,5 +1,6 @@
 {
    "styles" : [
+      "css/applausebutton.css",
       "css/normalize.css",
       "css/fonts.css",
       "css/academicons.css",
